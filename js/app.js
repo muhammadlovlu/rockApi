@@ -6,13 +6,13 @@ async function search() {
     const res = await fetch(api)
     const data = await res.json()
     displayAllSongs(data.data)
+
 }
 
 
 const displayAllSongs = songs => {
     const listing = document.getElementById("song-listing");
     songs.forEach(song => {
-        console.log(song)
         const div = document.createElement("div");
         div.className = "search-result col-md-8 mx-auto py-4";
         const songListing = `
@@ -63,3 +63,5 @@ const lyrics = data => {
     const searchEmpty = document.getElementById("search-text");
     searchEmpty.value = "";
 }
+
+
