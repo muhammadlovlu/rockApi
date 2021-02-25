@@ -3,7 +3,6 @@ async function search() {
     emptyListing.innerHTML = "";
     const search = document.getElementById("search-text").value;
     const api = `https://api.lyrics.ovh/suggest/${search}`;
-    console.log(api)
     const res = await fetch(api)
     const data = await res.json()
     displayAllSongs(data.data)
@@ -51,10 +50,17 @@ async function FindLyrics(artist, title) {
 }
 
 const lyrics = data => {
- const lyrics = document.getElementById("lyrics");
- const p = document.createElement("p");
- p.innerText = data.lyrics;
- lyrics.appendChild(p);
+    const lyrics = document.getElementById("lyrics");
+    const p = document.createElement("p");
+    p.className = "container d-flex justify-content-center";
+    p.style.fontFamily = "'Anton', sans-serif";
+    p.style.letterSpacing = "1.5px";
+    p.innerText = data.lyrics;
+    lyrics.appendChild(p);
+    const hideListing = document.getElementById("song-listing");
+    hideListing.style.display = "none";
+    const searchEmpty = document.getElementById("search-text");
+    searchEmpty.value = "";
 }
 
 
