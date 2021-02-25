@@ -49,6 +49,7 @@ async function FindLyrics(artist, title) {
 
 }
 
+
 const lyrics = data => {
     const lyrics = document.getElementById("lyrics");
     const p = document.createElement("p");
@@ -62,15 +63,3 @@ const lyrics = data => {
     const searchEmpty = document.getElementById("search-text");
     searchEmpty.value = "";
 }
-
-
-
-
-
-
-
-
-
-
-
-
