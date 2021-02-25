@@ -40,10 +40,6 @@ const displayAllSongs = songs => {
 }
 
 
-
-
-
-
 async function FindLyrics(artist, title) {
     const artistName = artist;
     const songTitle = title;
@@ -54,10 +50,7 @@ async function FindLyrics(artist, title) {
 
 }
 
-
-
 const lyrics = data => {
-
  const lyrics = document.getElementById("lyrics");
  const p = document.createElement("p");
  p.innerText = data.lyrics;
