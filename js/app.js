@@ -43,9 +43,9 @@ async function FindLyrics(artist, title) {
     const artistName = artist;
     const songTitle = title;
     const api = `https://api.lyrics.ovh/v1/${artistName}/${songTitle}`
-    const res = await fetch(api);
-    const data = await res.json();
-    lyrics(data);
+    const res = await fetch(api)
+    const data = await res.json()
+    lyrics(data)
 
 }
 
